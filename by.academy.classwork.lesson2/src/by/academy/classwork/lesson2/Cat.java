@@ -3,6 +3,7 @@ package by.academy.classwork.lesson2;
 public class Cat {
 	int Age;
 	String nickname;
+	double money;
 	
 	public Cat() {
 	}
@@ -16,14 +17,25 @@ public class Cat {
 	}
 	
 	public void sleep() {
-		System.out.println("Кот спит");
+		System.out.println("РљРѕС‚ СЃРїРёС‚");
 	}
 	
 	public void eat() {
-		System.out.println("Кот ест");
+		System.out.println("РљРѕС‚ РµСЃС‚");
 	}
 	
 	public void walk() {
-		System.out.println("Кот гуляет");
+		System.out.println("РљРѕС‚ РіСѓР»СЏРµС‚");
+	}
+	public void setMoney(double money) {
+		this.money = money;
+	}
+	
+	public int getAge() {
+		return Age;
+	}
+	
+	public double getMoney() {
+		return money;
 	}
 }

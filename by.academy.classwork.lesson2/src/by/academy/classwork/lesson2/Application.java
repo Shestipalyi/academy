@@ -4,7 +4,7 @@ public class Application {
 	
 	public static void main (String ...args) {
 		Cat noname = new Cat();
-		Cat named = new Cat ("Вася");
+		Cat named = new Cat("Vasia");
 		
 		named.eat();
 		named.sleep();
@@ -14,5 +14,10 @@ public class Application {
 		noname.grow();
 		noname.grow();
 		System.out.println(noname.Age);
-	}
+		
+		int catAge = noname.getAge();
+		
+		System.out.println(catAge);
+		System.out.println(named.money);
+		}
 }
