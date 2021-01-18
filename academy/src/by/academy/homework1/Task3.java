@@ -10,9 +10,9 @@ public class Task3 {
 		int i = 1;
 		int n = scan.nextInt();
 		while (i < 10) {
-			System.out.println(n + " * " + i + " = " + i*n);
+			System.out.println(n + " * " + i + " = " + i * n);
 			i++;
 		}
-	    scan.close();
+		scan.close();
 	}
 }

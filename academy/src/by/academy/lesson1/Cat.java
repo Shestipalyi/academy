@@ -31,26 +31,31 @@ public class Cat {
 	public Cat(String nickname) {
 	}
 
-	public void setMoney(int x){
+	public void setMoney(int x) {
 		money = x;
 	}
+
 	public int getMoney() {
 		System.out.println(money);
 		return money;
 	}
-	public void setInitials(String y){
+
+	public void setInitials(String y) {
 		initials = y.substring(0, 1);
 	}
+
 	public String getInitials() {
 		System.out.println(initials);
 		return initials;
-	}	
-	public void setIsHomeAnimal(boolean z){
+	}
+
+	public void setIsHomeAnimal(boolean z) {
 		isHomeAnimal = z;
 	}
+
 	public boolean getIsHomeAnimal() {
 		System.out.println(isHomeAnimal);
 		return isHomeAnimal;
-			
+
 	}
 }
