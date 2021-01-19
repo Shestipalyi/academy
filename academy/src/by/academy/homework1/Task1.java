@@ -7,7 +7,7 @@ public class Task1 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("¬ведите сумму покупки");
-		int sum = scan.nextInt();
+		double sum = scan.nextDouble();
 		System.out.println("¬ведите возраст покупател€");
 		int age = scan.nextInt();
 		scan.close();
