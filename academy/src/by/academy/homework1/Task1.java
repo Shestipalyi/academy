@@ -6,9 +6,9 @@ public class Task1 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Введите сумму покупки");
+		System.out.println("Р’РІРµРґРёС‚Рµ СЃСѓРјРјСѓ РїРѕРєСѓРїРєРё");
 		double sum = scan.nextDouble();
-		System.out.println("Введите возраст покупателя");
+		System.out.println("Р’РІРµРґРёС‚Рµ РІРѕР·СЂР°СЃС‚ РїРѕРєСѓРїР°С‚РµР»СЏ");
 		int age = scan.nextInt();
 		scan.close();
 
@@ -30,10 +30,10 @@ public class Task1 {
 		} else {
 			x = 20;
 		}
-//		System.out.println("Сумма покупки: " + sum);
-//		System.out.println("Возраст покупателя: " + age);
-//		System.out.println("Скидка сотавляет: " + x + "%");		
-		System.out.println("Итоговая стоимость с учетом скидки сотавляет: " + sum * (100 - x) / 100);
+//		System.out.println("РЎСѓРјРјР° РїРѕРєСѓРїРєРё: " + sum);
+//		System.out.println("Р’РѕР·СЂР°СЃС‚ РїРѕРєСѓРїР°С‚РµР»СЏ: " + age);
+//		System.out.println("РЎРєРёРґРєР° СЃРѕС‚Р°РІР»СЏРµС‚: " + x + "%");		
+		System.out.println("РС‚РѕРіРѕРІР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ СЃ СѓС‡РµС‚РѕРј СЃРєРёРґРєРё СЃРѕС‚Р°РІР»СЏРµС‚: " + sum * (100 - x) / 100);
 
 	}
 

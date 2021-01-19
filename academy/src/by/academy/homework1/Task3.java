@@ -6,7 +6,7 @@ public class Task3 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("введите число от 1 до 10");
+		System.out.println("РІРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РѕС‚ 1 РґРѕ 10");
 		int i = 1;
 		int n = scan.nextInt();
 		while (i < 10) {

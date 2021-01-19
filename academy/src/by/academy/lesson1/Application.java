@@ -16,7 +16,7 @@ public class Application {
 //		cat1.setMoney(10);
 //		cat1.getMoney();
 //		
-//		cat1.setInitials("Барсик");
+//		cat1.setInitials("Р‘Р°СЂСЃРёРє");
 //		cat1.getInitials();
 //		
 //		cat1.setIsHomeAnimal(true);
