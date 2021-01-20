@@ -17,6 +17,7 @@ public class Task5 {
 			System.out.println("Числа равны");
 		} 
 		System.out.println("Среднее арифметическое равно " + (double) (n1 + n2) / 2);
+		scan.close();
 	}
 
 }

@@ -49,7 +49,7 @@ public class Cat {
 
 	public String getInitials() {
 		System.out.println(initials);
-		return initials;
+		return initials; 
 	}
 
 	public void setIsHomeAnimal(boolean z) {
@@ -59,6 +59,13 @@ public class Cat {
 	public boolean getIsHomeAnimal() {
 		System.out.println(isHomeAnimal);
 		return isHomeAnimal;
+	}
 
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 }
