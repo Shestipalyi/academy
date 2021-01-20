@@ -1,4 +1,4 @@
-package by.academy.homework1;
+package by.academy.homework.hw1;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -24,8 +24,8 @@ public class Task2 {
 			break;
 		case "char":
 			System.out.println("Введите символ");
-			int x = System.in.read();
-			System.out.println("Код символа " + x);
+			String c = scan.nextLine();
+			System.out.println("Код символа " + (int) c.charAt(0));
 			break;
 		case "String":
 			System.out.println("Введите имя");

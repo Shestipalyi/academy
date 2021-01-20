@@ -1,4 +1,4 @@
-package by.academy.lesson1;
+package by.academy.classwork.lesson1;
 
 import java.io.*;
 
@@ -9,6 +9,15 @@ public class Cat {
 	String initials;
 	boolean isHomeAnimal;
 
+	public Cat() {
+		super();
+	}
+	
+	public Cat(String nickname) {
+		super();
+		this.nickname = nickname;
+	}
+	
 	public void grow() {
 		age++;
 	}
@@ -23,12 +32,6 @@ public class Cat {
 
 	public void walk() {
 		System.out.println("Кот гуляет");
-	}
-
-	public Cat() {
-	}
-
-	public Cat(String nickname) {
 	}
 
 	public void setMoney(int x) {
