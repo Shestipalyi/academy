@@ -12,11 +12,9 @@ public class Task18 {
 			if (((i % 2) != 0) && ((i % 3) != 0) && ((i % 5) != 0)){
 				a++;
 			}
-			
+	
 		}
 		System.out.println(a);
-	
-
 	}
 
 }
