@@ -14,36 +14,30 @@ public class Task1 {
 		int n = scan.nextInt();
 		String[] ar = new String[n];
 		scan.nextLine();
-		for (int i = 0;  i < n; i++) {
-			ar [i] = scan.nextLine();			
-		}		
+		for (int i = 0; i < n; i++) {
+			ar[i] = scan.nextLine();
+		}
 		int min = ar[0].length();
 		int max = ar[0].length();
-		String minString =ar[0];
-		String maxString =ar[0];
-		
+		String minString = ar[0];
+		String maxString = ar[0];
+
 		System.out.println(Arrays.toString(ar));
-		for (int i = 1;  i < n; i++) {
+		for (int i = 1; i < n; i++) {
 			if (ar[i].length() < min) {
 				min = ar[i].length();
-				minString =ar[i];					
+				minString = ar[i];
 			} else if (ar[i].length() > max) {
 				max = ar[i].length();
-				maxString =ar[i];				
+				maxString = ar[i];
 			}
-			
 		}
 		System.out.println("Min: " + min);
 		System.out.println("MinString: " + minString);
 		System.out.println("Max: " + max);
 		System.out.println("MaxString: " + maxString);
-		
-		
-		
+
 		scan.close();
-		
-		
-		
 
 	}
 
