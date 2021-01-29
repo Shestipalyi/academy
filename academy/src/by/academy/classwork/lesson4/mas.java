@@ -1,26 +1,33 @@
 package by.academy.classwork.lesson4;
 
+// отсортировать произвольный массив
+
 import java.util.Random;
 
 public class mas {
 
 	public static void main(String[] args) {
-		int[] array1 = new int[10];
+		int[] ar = new int[10];
 		Random rand = new Random();
-		for (int i = 0; i < array1.length; i++) {
-			array1[i] = rand.nextInt(10);
-			System.out.print((array1[i]) + " ");
+		int temp;
+		for (int i = 0; i < ar.length; i++) {
+			ar[i] = rand.nextInt(10);
+			System.out.print((ar[i]) + " ");
 		}
-		for (int i = 0; i < array1.length; i++) {
-			int temp;
-			for (int n = 0; n < array1.length; n++) {
-				temp = array1[i];
-				array1[i] = array1[n];
-				array1[n] = temp;
-
+		for (int i = ar.length-1; i > 0; i--) {
+			for (int j = 0; j < i; j++) {
+				if (ar[j]>ar[j+1]) {
+					temp = ar[j];
+					ar[j] = ar[j+1];
+					ar[j+1] = temp;					
+				}
 			}
 		}
-		System.out.println(array1 + " ");
+		System.out.println();
+		for (int i = 0; i < ar.length; i++) {
+			System.out.print((ar[i]) + " ");
+		}
+
 		// TODO Auto-generated method stub
 
 	}
