@@ -14,6 +14,7 @@ public class Test {
 		s = s.trim();
 		String template = "[a-zA-Z0-9_]+\\.[a-z]{3}";
 		Pattern pattern = Pattern.compile(template);
+		
 		return true;
 	}
 }
