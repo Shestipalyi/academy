@@ -19,6 +19,7 @@ public class Task3 {
 				n++;
 			}
 		}
+		System.out.println("test");
 		System.out.println("\nВ случайном массиве " + n + " четных чисел");
 
 	}
