@@ -18,7 +18,6 @@ public class Task3 {
 			if (ar[i] % 2 == 0) {
 				n++;
 			}
-
 		}
 		System.out.println("\nВ случайном массиве " + n + " четных чисел");
 
