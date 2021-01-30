@@ -11,7 +11,5 @@ public class Task4 {
 			i++;
 			n = (int) Math.pow(2, i);
 		}
-
 	}
-
 }

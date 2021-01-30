@@ -34,7 +34,5 @@ public class Task1 {
 //		System.out.println("Возраст покупателя: " + age);
 //		System.out.println("Скидка сотавляет: " + x + "%");		
 		System.out.println("Итоговая стоимость с учетом скидки сотавляет: " + sum * (100 - x) / 100);
-
 	}
-
 }
