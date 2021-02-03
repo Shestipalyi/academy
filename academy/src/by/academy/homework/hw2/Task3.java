@@ -20,5 +20,6 @@ public class Task3 {
 			str3 = str1.substring(0, str1.length() / 2) + str2.substring(str2.length() / 2, str2.length());
 			System.out.println(str3);
 		}
+		scan.close();
 	}
 }
