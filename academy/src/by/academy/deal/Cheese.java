@@ -1,22 +1,31 @@
 package by.academy.deal;
 
 public class Cheese extends Product {
-	double weight;
+	int age;
 	
 	public Cheese() {
 		super();
 	}
-	public Cheese (String name, Double price, String manufacture, Integer quantity, double weight) {
+	public Cheese (String name, Double price, String manufacture, Integer quantity, int age) {
 		this.name = name;
 		this.price = price;
 		this.manufacture = manufacture;
 		this.quantity = quantity; 
-		this.weight = weight;
+		this.age = age;
 	}
-	public double getWeight() {
-		return weight;
+	@Override
+	public Double discount() {
+		if (age > 20) {
+			return 0.8;
+		}
+		return 1.0;
 	}
-	public void setWeight(double weight) {
-		this.weight = weight;
+	
+	public int getAge() {
+		return age;
 	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+
 }
