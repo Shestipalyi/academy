@@ -91,7 +91,7 @@ public class Deal {
 				summ += totalProductPrice;
 				System.out.println(product.getName() + " "
 						+ product.getPrice() * product.discount() + " X " + product.getQuantity()
-						+ " = " + totalProductPrice + "(Discount " + product.discount() + "%)");
+						+ " = " + totalProductPrice + "(Скидка " + (1-product.discount())*100 + "%)");
 			}
 		}
 		System.out.println();
