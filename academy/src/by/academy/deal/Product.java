@@ -1,14 +1,14 @@
 package by.academy.deal;
 
-public class Product {
+public abstract class Product {
 	private String name;
 	private Double price;
 	private String manufacture;
-	private Integer quantity;
-	
-    public Product() {
-        super();
-    }
+	public Integer quantity;
+
+	public Product() {
+		super();
+	}
 
 	public Product(String name, Double price, String manufacture, Integer quantity) {
 		super();
@@ -16,13 +16,6 @@ public class Product {
 		this.price = price;
 		this.manufacture = manufacture;
 		this.quantity = quantity;
-	}
-
-	public Double discount() {
-		if (quantity > 20) {
-			return 0.9;
-		}
-		return 1.0;
 	}
 
 	public String getName() {
@@ -56,4 +49,11 @@ public class Product {
 	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
 	}
+
+	public Double calcFinalPricet() {
+		return quantity * price * discount();
+	}
+
+	public abstract Double discount();
+
 }

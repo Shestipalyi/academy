@@ -5,11 +5,11 @@ public class Person {
 	private String phone;
 	private String email;
 	private Double money;
-	
-    public Person() {
-        super();
-    }
-	
+
+	public Person() {
+		super();
+	}
+
 	public Person(String name, String phone, String email, Double money) {
 		this.name = name;
 		this.phone = phone;

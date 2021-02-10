@@ -1,17 +1,17 @@
 package by.academy.deal;
 
-public class Deal {	
+public class Deal {
 	public final static int DEFAULT_PRODUCT_SIZE = 2;
 
 	private Person seller;
-    private Person buyer;
-    private Product[] products;
-    private String date;
-    private int productCounter;
+	private Person buyer;
+	private Product[] products;
+	private String date;
+	private int productCounter;
 
-    public Deal() {
-        super();
-    }
+	public Deal() {
+		super();
+	}
 
 	public Deal(String date, Person seller, Person buyer) {
 		super();
@@ -19,39 +19,39 @@ public class Deal {
 		this.seller = seller;
 		this.buyer = buyer;
 	}
-	
-    public Person getSeller() {
-        return seller;
-    }
 
-    public void setSeller(Person seller) {
-        this.seller = seller;
-    }
+	public Person getSeller() {
+		return seller;
+	}
 
-    public Person getBuyer() {
-        return buyer;
-    }
+	public void setSeller(Person seller) {
+		this.seller = seller;
+	}
 
-    public void setBuyer(Person buyer) {
-        this.buyer = buyer;
-    }
+	public Person getBuyer() {
+		return buyer;
+	}
 
-    public Product[] getProducts() {
-        return products;
-    }
+	public void setBuyer(Person buyer) {
+		this.buyer = buyer;
+	}
 
-    public void setProducts(Product[] products) {
-        this.products = products;
-    }
+	public Product[] getProducts() {
+		return products;
+	}
 
-    public String getDate() {
-        return date;
-    }
+	public void setProducts(Product[] products) {
+		this.products = products;
+	}
 
-    public void setDate(String date) {
-        this.date = date;
-    }
-    
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
 	public void addProduct(Product product) {
 		if (products == null) {
 			products = new Product[DEFAULT_PRODUCT_SIZE];
@@ -62,7 +62,7 @@ public class Deal {
 		}
 		products[productCounter++] = product;
 	}
-    
+
 	public void deleteProduct(int index) {
 		if (index > products.length || index < 0) {
 			System.out.println("Index of bound");
@@ -74,13 +74,13 @@ public class Deal {
 		products[productCounter] = null;
 		productCounter--;
 	}
-	
+
 	private void expandProductArray() {
 		Product[] tempArray = new Product[products.length * 2 + 1];
 		System.arraycopy(products, 0, tempArray, 0, products.length);
 		products = tempArray;
 	}
-	
+
 	private void printBill() {
 		double summ = 0;
 		System.out.println("Bill " + date);
@@ -89,9 +89,9 @@ public class Deal {
 			if (product != null) {
 				double totalProductPrice = product.getPrice() * product.getQuantity();
 				summ += totalProductPrice;
-				System.out.println(product.getName() + " "
-						+ product.getPrice() * product.discount() + " X " + product.getQuantity()
-						+ " = " + totalProductPrice + "(Скидка " + (1-product.discount())*100 + "%)");
+				System.out.println(product.getName() + " " + product.getPrice() * product.discount() + " X "
+						+ product.getQuantity() + " = " + totalProductPrice + "(Скидка "
+						+ (1 - product.discount()) * 100 + "%)");
 			}
 		}
 		System.out.println();
@@ -99,7 +99,7 @@ public class Deal {
 		buyer.setMoney(buyer.getMoney() - summ);
 		seller.setMoney(seller.getMoney() + summ);
 	}
-	
+
 	public void deal() {
 		double sum = 0;
 		for (Product product : products) {
@@ -114,5 +114,3 @@ public class Deal {
 		}
 	}
 }
-
-
