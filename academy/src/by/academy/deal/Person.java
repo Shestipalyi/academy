@@ -1,17 +1,14 @@
 package by.academy.deal;
 
 public class Person {
-	String name;
-	String phone;
-	String email;
-	Double money;
+	private String name;
+	private String phone;
+	private String email;
+	private Double money;
 	
-	public Person() {
-		name = "name";
-		phone = "+375 XX XXX XX XX" ;
-		email = "xxxxxx@xxxx.xxx";
-		money = 500.0; 
-	}
+    public Person() {
+        super();
+    }
 	
 	public Person(String name, String phone, String email, Double money) {
 		this.name = name;

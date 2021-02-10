@@ -1,18 +1,13 @@
 package by.academy.deal;
 
 public class Wine extends Product {
-	String country;
+	private String country;
+	private String grapes;	
 
-	public Wine() {
-		super();
-	}
-
-	public Wine(String name, Double price, String manufacture, Integer quantity, String country) {
-		this.name = name;
-		this.price = price;
-		this.manufacture = manufacture;
-		this.quantity = quantity;
+	public Wine (String name, Double price, String manufacture, Integer quantity, String country, String grapes) {
+		super(name, price, manufacture, quantity);
 		this.country = country;
+		this.grapes = grapes;
 	}
 
 	@Override
@@ -29,6 +24,16 @@ public class Wine extends Product {
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+
+
+	public String getGrapes() {
+		return grapes;
+	}
+
+
+	public void setGrapes(String grapes) {
+		this.grapes = grapes;
 	}
 
 }

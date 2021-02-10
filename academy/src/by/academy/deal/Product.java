@@ -1,19 +1,17 @@
 package by.academy.deal;
 
 public class Product {
-	String name;
-	Double price;
-	String manufacture;
-	Integer quantity;
-
-	public Product() {
-		name = "name";
-		price = 5.0;
-		manufacture = "manufacture";
-		quantity = 10;
-	}
+	private String name;
+	private Double price;
+	private String manufacture;
+	private Integer quantity;
+	
+    public Product() {
+        super();
+    }
 
 	public Product(String name, Double price, String manufacture, Integer quantity) {
+		super();
 		this.name = name;
 		this.price = price;
 		this.manufacture = manufacture;
