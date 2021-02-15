@@ -33,5 +33,5 @@ public class Wine extends Product {
 	public void setGrapes(String grapes) {
 		this.grapes = grapes;
 	}
-
+	
 }

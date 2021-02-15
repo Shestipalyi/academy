@@ -33,5 +33,5 @@ public class Cheese extends Product {
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
-
+	
 }

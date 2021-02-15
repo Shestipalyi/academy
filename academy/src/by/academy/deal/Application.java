@@ -1,30 +1,32 @@
 package by.academy.deal;
 
 import java.util.Scanner;
+import java.text.ParseException;
 
 public class Application {
 
-	public static void main(String[] args) {
-		Person seller = new Person();
-		Person buyer = new Person();
+	public static void main(String[] args) throws ParseException{
+        Application application = new Application();
+        application.runDeal();
+    }		
+		private void runDeal() throws ParseException {
 		Scanner scan = new Scanner(System.in);
-
-		System.out.print("Введите имя покупателя");
-		buyer.setName(scan.next());
-		System.out.print("Введите количество денег у покупателя");
-		buyer.setMoney(scan.nextDouble());
-		System.out.print("Введите имя продовца");
-		seller.setName(scan.next());
-		System.out.print("Введите количество денег у продовца");
-		seller.setMoney(scan.nextDouble());
-
-		Deal deal = new Deal("01.01.1984", seller, buyer);
-
-		deal.addProduct(new Cheese("пармезан", 15.0, "Веселый молочник", 5, 21, 0.5));
-		deal.addProduct(new Wine("масандра", 13.0, "Инкерман", 1, "Украина", "Мускат"));
-		deal.addProduct(new Meat("говядина", 18.5, "Слонимский мясокомбинат", 21, 3, 1.0));
-
-		deal.deal();
+		Deal deal = new Deal();
+		System.out.println("Заполните данные о продавце");
+		Person person1 = new Person();
+		person1.readNewPerson();
+		System.out.println("Заполните данные о покупателе");
+		Person person2 = new Person();
+		person2.readNewPerson();
+		deal.setSeller(person1);
+		deal.setBuyer(person2);
+		deal.dealMenu(scan);
+		if (deal.getProducts() != null && deal.getProducts()[0] != null) {
+			System.out.println("Сделка прошла успешно");
+			System.out.println();
+		} else {
+			System.out.println("Сделка не состоялась");
+		}
 		scan.close();
 	}
 }
