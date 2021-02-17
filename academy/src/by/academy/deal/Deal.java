@@ -1,7 +1,6 @@
 package by.academy.deal;
 
 import java.util.Scanner;
-import java.util.Date;
 import java.time.LocalDate;
 
 public class Deal {
