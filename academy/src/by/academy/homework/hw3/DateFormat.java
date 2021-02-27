@@ -14,5 +14,4 @@ public class DateFormat implements Validator {
         Matcher matcher = pattern.matcher(strDate.trim());
         return matcher.matches();
     }
-
 }
