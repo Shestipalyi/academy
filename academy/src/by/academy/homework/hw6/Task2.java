@@ -1,14 +1,13 @@
 package by.academy.homework.hw6;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class Task2 {
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws IOException {
 		File file = new File("Result.txt");
 		StringBuilder sb = new StringBuilder();
 		
