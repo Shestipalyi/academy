@@ -1,5 +1,8 @@
 package by.academy.deal;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 import java.time.LocalDate;
 
@@ -12,11 +15,11 @@ public class Deal {
 	private Product[] products;
 	private int productCounter;
 	public static final String MENU_DEAL = "\nМеню сделки:" + "\nВведите:" + "\n1.Добавить продукт в сделку"
-			+ "\n2.Удалить продукт из сделки" + "\n3.Вывести текущий чек" + "\n0.Выход";
+			+ "\n2.Удалить продукт из сделки" + "\n3.Вывести текущий чек" + "\n4.Перенести текущий чек в файл" + "\n0.Выход";
 	public static final String MENU_PRODUCT = "Меню продуктов:" + "\nВведите:" + "\n1.Добавить мясо"
 			+ "\n2.Добавить вино" + "\n3.Добавить сыр" + "\n0.Выход";
-    private static final LocalDate date = LocalDate.now();
-    private static final LocalDate deadLine = LocalDate.now().plusDays(10);
+	private static final LocalDate date = LocalDate.now();
+	private static final LocalDate deadLine = LocalDate.now().plusDays(10);
 
 	public Deal() {
 		super();
@@ -100,6 +103,25 @@ public class Deal {
 		seller.setMoney(seller.getMoney() + summ);
 	}
 
+	private void createFileBill() throws IOException {
+		double summ = 0;
+		File file = new File("DealBill.txt");
+		file.createNewFile();
+		try (FileWriter fw = new FileWriter(file)) {
+			fw.write("Bill " + date + "\n");
+			for (Product product : products) {
+				if (product != null) {
+					double totalProductPrice = product.getPrice() * product.getQuantity() * product.discount();
+					summ += totalProductPrice;
+					fw.write(product.getName() + " " + product.getPrice() * product.discount() + " X "
+							+ product.getQuantity() + " = " + totalProductPrice + "(Скидка "
+							+ (1 - product.discount()) * 100 + "%)" + "\n");
+				}
+			}
+			fw.write("\n" + "Итого " + summ + "\n" + "дедлайн: " + deadLine);
+		}
+	}
+
 	public void deal() {
 		double sum = 0;
 		for (Product product : products) {
@@ -114,7 +136,7 @@ public class Deal {
 		}
 	}
 
-	public void dealMenu(Scanner scan) {
+	public void dealMenu(Scanner scan) throws IOException{
 		boolean repeat = true;
 		do {
 			System.out.println(MENU_DEAL);
@@ -140,6 +162,9 @@ public class Deal {
 				break;
 			case "3":
 				printBill();
+				break;
+			case "4":
+				createFileBill();
 				break;
 			case "0":
 				repeat = false;

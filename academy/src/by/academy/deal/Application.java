@@ -1,15 +1,16 @@
 package by.academy.deal;
 
 import java.util.Scanner;
+import java.io.IOException;
 import java.text.ParseException;
 
 public class Application {
 
-	public static void main(String[] args) throws ParseException{
+	public static void main(String[] args) throws ParseException, IOException{
         Application application = new Application();
         application.runDeal();
     }		
-		private void runDeal() throws ParseException {
+		private void runDeal() throws ParseException, IOException {
 		Scanner scan = new Scanner(System.in);
 		Deal deal = new Deal();
 		System.out.println("Заполните данные о продавце");
