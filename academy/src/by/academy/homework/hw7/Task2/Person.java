@@ -1,6 +1,7 @@
 package by.academy.homework.hw7.Task2;
 
 public class Person {
+
 	private String firstName;
 	private String lastName;
 	private int age;
@@ -11,7 +12,6 @@ public class Person {
 	}
 
 	public Person(String firstName, String lastName, int age, String dateOfBirth) {
-		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -49,5 +49,4 @@ public class Person {
 	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-
 }
